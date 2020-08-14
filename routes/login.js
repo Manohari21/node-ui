@@ -32,6 +32,7 @@ router.post('/sendTemporaryPassword', (req, res) => {
     });
 })
 router.post('/validate', (req, res) => {
+    console.log(springHost);
     console.log("Validate page requested");
     var errormessage = 'Invalid Username/password';
     let url = `http://${springHost}:${springPort}/getUser?name=${req.body.username}`;
